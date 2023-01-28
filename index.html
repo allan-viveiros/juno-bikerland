@@ -18,15 +18,38 @@
 <body>
 
     <header id="home">
-        <div class="home wrapper">            
+        <div class="home wrapper">    
+            
+            <!-- Simulate a smartphone / tablet -->
+            <div class="mobileContainer">
+
+                <!-- Top Navigation Menu -->
+                <div class="topnav">   
+                    <!-- <a href="#home" class="active"></a> -->
+                    <div id="myLinks">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#blog">blog</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            <!-- End smartphone / tablet look -->
+            </div>
+
+
             <!-- Navbar -->
             <nav>
-                <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#blog">blog</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
+                <div id="menuNav">
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#blog">blog</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
             </nav>
             <!-- Bikerland -->
             <div class="flex"> 
@@ -34,10 +57,18 @@
                 <!-- Social Media icons -->
                 <div class="socialMedia">
                     <ul>
-                        <li><i class="fa fa-instagram"></i></li>
-                        <li><i class="fa fa-facebook-f"></i></li>
-                        <li><i class="fa fa-snapchat-ghost"></i></li>
-                        <li><i class="fa fa-twitter"></i></li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-snapchat-ghost"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +79,7 @@
         <!-- About Section -->
         <section id="about">
             <div class="about wrapper">
-                <article>
+                <article class="firstArticle">
                     <div class="textLink">
                         <h2>about us</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quibusdam!</p>
@@ -57,7 +88,8 @@
                     <div class="imgAbout imgAboutUs"></div>
                         <figure class="imgContainer"><img src="./images/image-2.jpg" alt="A random man riding a white bike"></figure>
                 </article>
-                <article>
+
+                <article class="secondArticle">
                     <div class="imgAbout imgOurMission"></div>
                         <figure class="imgContainer"><img src="./images/image-7.jpg" alt="A black bike parked close to a black gate"></figure>
                     <div class="textLink">
@@ -77,7 +109,7 @@
                     <figure class="imgContainer"><img src="./images/image-6.jpg" alt="Picture of Alissa ridding a bike"></figure>
                     <div class="text">
                         <h3>meet alissa</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime esse officiis consequuntur, eligendi perspiciatis possimus dolorem libero rerum reiciendis. Aut doloribus laboriosam quae voluptates eum, debitis dolorum? Magnam, molestias id.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia a dolore dolor doloremque animi, optio soluta numquam aliquam, molestiae sit possimus adipisci voluptates hic quae corrupti. Repellendus nobis, officia dignissimos at illo numquam delectus soluta nemo commodi deleniti! Velit minus dolorum odit aperiam tenetur autem nihil, necessitatibus sunt atque sapiente tempora laboriosam iure eveniet? Provident dolore officiis quas, doloribus quibusdam</p>
                         <a href="#">read more</a>
                     </div>                    
                 </article>
@@ -164,6 +196,17 @@
             <p>Copyright © 2023</p>
         </div>        
     </footer>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
     
 </body>
 </html>

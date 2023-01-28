@@ -98,6 +98,11 @@ button {
     /* border: 1px solid blue; */
 }
 
+/* **MENU NAV DESKTOP** */
+.home .mobileContainer {
+    display: none;
+}
+
 nav {
     width: 50%;
     margin: 0 auto;
@@ -114,7 +119,11 @@ nav ul {
     text-transform: capitalize;
 }
 
-div.home .flex {
+nav ul a:hover {
+    color: #F2A11C;
+}
+
+.home .flex {
     display: flex;
     flex-direction: row;
 
@@ -128,6 +137,10 @@ div.home .flex {
     text-align: center;
 
     /* border: 1px solid yellow;  */
+}
+
+.socialMedia i:hover {
+    color: #FFF;
 }
 
 i {
@@ -160,7 +173,7 @@ i {
     color: #4A4A4A;
 }
 
-div.textLink a {
+.about .textLink a {
     font-family: 'Catamaran', sans-serif;
     font-weight: bold;
     font-size: 0.9rem;
@@ -175,6 +188,10 @@ div.textLink a {
     /* position: relative;
     top: 120px;
     left: 50px; */
+}
+
+.about .textLink a:hover {
+    background-color: #4A4A4A;
 }
 
 .about article figure.imgContainer, .about article .textLink{
@@ -232,6 +249,11 @@ div.textLink a {
     padding: 10px 30px;        
 }
 
+.blog .blogArticle .text a:hover {
+    background-color: #F2A11C;
+    color: #1f2022;
+}
+
 .blog .wrapperButtons {
     background-image: url(../images/image-5.jpg);
     background-repeat: no-repeat;
@@ -260,6 +282,13 @@ div.textLink a {
     font-size: 1rem;
 }
 
+.blog .wrapperButtons .btn a i:hover {
+    color: #F2A11C;
+}
+.blog .wrapperButtons .btn a p:hover {
+    color: #FFF;
+}
+
 /* **CONTACT STYLES** */
 .contact .gallery {
     padding: 100px;
@@ -275,9 +304,8 @@ div.textLink a {
 }
 
 .contact .gallery .fig { 
-    max-width: 300px;
-    max-height: 300px; 
-    background-repeat: no-repeat;
+    max-width: 250px;
+    max-height: 250px; 
     background-size: cover;
     margin-bottom: 20px;
     overflow: hidden;
@@ -339,7 +367,7 @@ div.textLink a {
     width: 200px;
 }
 
-.contact .formWrapper .addressWrapper .subscribe form button{
+.contact .formWrapper .addressWrapper .subscribe form button {
     display:inline;
     margin: 0;
     padding: 5px 10px;
@@ -349,6 +377,11 @@ div.textLink a {
     width: fit-content;
 }
 
+.contact .formWrapper .addressWrapper .subscribe form button:hover, 
+.contact .formWrapper .addressWrapper .subscribe form button:focus {
+    color: #F2A11C;
+    background-color: #1f2022;
+}
 
 /* **FOOTER** */
 footer .wrapper {
@@ -363,3 +396,180 @@ footer .wrapper p {
     margin: 0;
     padding: 5px;
 }
+
+
+/* ** MEDIA QUERY ** */
+@media (max-width: 768px){
+    .home {
+        background-image: url(../images/image-1-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .socialMedia{
+        display: none;
+    }
+
+    /* **Toggle menu** */
+    #menuNav {
+        display: none;
+    }
+
+    .home .mobileContainer {
+        display: inline-block;
+        width: 100%;
+        min-height: 50px;
+        margin: 10px 0;
+    }
+    .topnav {
+        overflow: hidden;
+        min-height: 50px;
+        position: relative;
+    }
+      
+    .topnav #myLinks {
+        display: none;
+        margin-top: 50px;
+        background-color: #1f2022;
+    }
+      
+    .topnav a {
+        color: #FFF;
+        padding: 20px;
+        display: block;
+        text-align: right;
+    }
+      
+    .topnav a.icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a.icon i {
+        color: #FFF;
+        font-size: 1.5rem;
+    }
+
+    /* **ABOUT SECTION MOBILE** */
+    .about section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-top: 0;
+        padding-top: 0;       
+    }
+
+    .about .firstArticle {
+        flex-direction: column-reverse;
+    }
+    .about .secondArticle {
+        flex-direction: column;        
+    }
+    
+    .about .firstArticle .textLink,
+    .about .firstArticle .imgAboutUs,
+    .about .secondArticle .textLink, 
+    .about .secondArticle .imgAboutUs {
+        width: 100%;
+    }
+
+    .about article figure.imgContainer, 
+    .about article .textLink{
+        width: 50%;    
+        text-align: center;
+    } 
+    
+    .about article figure.imgContainer {
+        width: auto;
+    }
+    
+    .about article figure.imgContainer img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .about article figure {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* **BLOG SECTION MOBILE** */
+    .blog .blogArticle {
+        padding: 50px 10PX;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .blog .blogArticle .imgContainer {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .blog .blogArticle .text {
+        width: auto;
+        height: auto;
+        margin: 50px auto;
+    }
+
+    .blog .blogArticle .text p {
+        text-align: left;
+    }
+
+    /* **BLOG BUTTONS** */
+    .blog .wrapperButtons .btn {
+        display: block;
+        margin: 40px;
+    }
+
+    .contact .gallery {
+        padding: 100px 5px;
+    }
+
+    .contact .gallery .fig {        
+        min-width: 180px;
+        min-height: 180px;       
+    }
+
+    .contact .gallery .fig3 {
+        display: none;
+    }
+    
+    /* **CONTACT SECTION MOBILE** */
+    .contact .formWrapper {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contact .formWrapper nav {
+        font-size: 0.8rem;
+    }
+
+    .contact .formWrapper .addressWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .contact .formWrapper .addressWrapper .subscribe form input[type=email] {
+        display: block;
+        margin: 10px auto;
+        min-width: 300px;
+        text-align: center;
+    }
+    
+    .contact .formWrapper .addressWrapper .subscribe form button {
+        display: block;
+        margin: 0 auto;
+        min-width: 300px;
+    }
+}
+
