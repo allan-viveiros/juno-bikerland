@@ -63,7 +63,6 @@ h1 {
     text-align: center;
     text-transform: capitalize;
     margin: 200px auto;
-
 }
 
 h2, h3 {
@@ -98,30 +97,49 @@ button {
     /* border: 1px solid blue; */
 }
 
+/**********************************************************************************/
 /* **MENU NAV DESKTOP** */
-.home .mobileContainer {
-    display: none;
-}
-
-nav {
-    width: 50%;
+.nav {
     margin: 0 auto;
-    position: relative;
-    top: 20px;
-    
-    /* border: 1px solid red; */
+    text-align: center;            
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.nav ul li {
+    display: inline-block;
+    padding: 15px 25px;
     text-transform: capitalize;
 }
 
-nav ul a:hover {
+.nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #FFF;
+}
+.nav ul li a:hover {
     color: #F2A11C;
 }
+
+.toggleButton {
+    width: 35px;
+    position: absolute;
+    right: 80px;
+    top: 30px;
+    display: none;
+}
+.toggleButton i {
+    color: #FFF;
+    font-size: 2rem;
+}
+/* .toggleButton span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    float: left;
+    margin-bottom: 8px;
+} */
+
+/*************************************************************************************************/
 
 .home .flex {
     display: flex;
@@ -317,13 +335,31 @@ i {
     padding: 50px 100px;
 }
 
-.contact .formWrapper nav {
+.bottomNav ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bottomNav ul li {
+    display: inline-block; 
+    text-transform: capitalize;  
+}
+
+.bottomNav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #FFF;
+}
+.contact .formWrapper .bottomNav {
     margin-bottom: 50px;
 }
 
 .contact .formWrapper a {
     text-transform: uppercase;
     margin: 0 20px;
+}
+.contact .formWrapper a:hover {
+    color: #F2A11C;
 }
 
 .contact .formWrapper .addressWrapper {
@@ -408,54 +444,41 @@ footer .wrapper p {
     }
 
     h1 {
-        font-size: 3.5rem;
+        font-size: 3.5rem; 
     }
 
     .socialMedia{
         display: none;
     }
 
+    /*************************************************************************************/
     /* **Toggle menu** */
-    #menuNav {
-        display: none;
+    .toggleButton {
+        display: block;
     }
 
-    .home .mobileContainer {
-        display: inline-block;
+    #nav {
+        display: none;
         width: 100%;
-        min-height: 50px;
-        margin: 10px 0;
-    }
-    .topnav {
-        overflow: hidden;
-        min-height: 50px;
-        position: relative;
-    }
-      
-    .topnav #myLinks {
-        display: none;
+        padding-top: 20px;
         margin-top: 50px;
-        background-color: #1f2022;
     }
-      
-    .topnav a {
-        color: #FFF;
-        padding: 20px;
-        display: block;
-        text-align: right;
+    #nav ul li {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        background-color: #1f2022b0;     
     }
-      
-    .topnav a.icon {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
+    #nav ul li:hover {
+        color: #F2A11C;
+        background-color: #4A4A4A;
     }
 
-    .topnav a.icon i {
-        color: #FFF;
-        font-size: 1.5rem;
-    }
+    #nav.show {
+        display: block;
+    }   
+
+    /*****************************************************************************************/
 
     /* **ABOUT SECTION MOBILE** */
     .about section {
@@ -530,6 +553,7 @@ footer .wrapper p {
         margin: 40px;
     }
 
+    /* **CONTACT SECTION** */
     .contact .gallery {
         padding: 100px 5px;
     }
@@ -549,7 +573,13 @@ footer .wrapper p {
         text-align: center;
     }
 
-    .contact .formWrapper nav {
+    /* **BOTTOM NAVBAR** */
+    .bottomNav {
+        margin: 0 auto;
+        text-align: center;            
+    }   
+
+    .contact .formWrapper .bottomNav {
         font-size: 0.8rem;
     }
 
