@@ -19,9 +19,8 @@
 
     <header id="home">
         <div class="home wrapper">    
-            
-            <!-- ***************************************************************************************************************** -->
-            <div class="toggleButton" onClick="myFunction();">
+
+            <div class="toggleButton" onClick="functionToggle();">
                 <i class="fa fa-bars"></i>                
             </div>
             <nav id="nav" class="nav">
@@ -31,8 +30,7 @@
                     <li><a href="#blog">blog</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
-            </nav>
-            <!-- ***************************************************************************************************************** --> 
+            </nav>            
 
             <!-- Bikerland -->
             <div class="flex"> 
@@ -55,7 +53,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </header>
 
@@ -182,7 +179,7 @@
     </footer>
 
     <script>
-        function myFunction() {
+        function functionToggle() {
             var topNav = document.getElementById("nav");
             topNav.classList.toggle("show");
         }

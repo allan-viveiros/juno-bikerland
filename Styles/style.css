@@ -52,7 +52,7 @@ figure {
     margin: 0 auto;
     padding: 0;
 
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
 }
 
 /* **TYPOGRAPHY STYLES** */
@@ -97,7 +97,6 @@ button {
     /* border: 1px solid blue; */
 }
 
-/**********************************************************************************/
 /* **MENU NAV DESKTOP** */
 .nav {
     margin: 0 auto;
@@ -124,23 +123,15 @@ button {
     position: absolute;
     right: 80px;
     top: 30px;
-    display: none;
+    display: none;    
 }
 .toggleButton i {
     color: #FFF;
     font-size: 2rem;
+    cursor: pointer;
 }
-/* .toggleButton span {
-    display: inline-block;
-    width: 100%;
-    height: 2px;
-    background-color: #FFF;
-    float: left;
-    margin-bottom: 8px;
-} */
 
-/*************************************************************************************************/
-
+/* ***HOME SECTION*** */
 .home .flex {
     display: flex;
     flex-direction: row;
@@ -186,7 +177,8 @@ i {
     /* border: 1px solid red; */
 }
 
-.about article .textLink, .about article .textLink h2 {
+.about article .textLink, 
+.about article .textLink h2 {
     padding: 20px;
     color: #4A4A4A;
 }
@@ -212,7 +204,8 @@ i {
     background-color: #4A4A4A;
 }
 
-.about article figure.imgContainer, .about article .textLink{
+.about article figure.imgContainer, 
+.about article .textLink{
     width: 50%;    
 }
 
@@ -433,8 +426,7 @@ footer .wrapper p {
     padding: 5px;
 }
 
-
-/* ** MEDIA QUERY ** */
+/* ** MEDIA QUERY ** MEDIUM SCREENS** */
 @media (max-width: 768px){
     .home {
         background-image: url(../images/image-1-mobile.jpg);
@@ -450,8 +442,7 @@ footer .wrapper p {
     .socialMedia{
         display: none;
     }
-
-    /*************************************************************************************/
+  
     /* **Toggle menu** */
     .toggleButton {
         display: block;
@@ -477,9 +468,7 @@ footer .wrapper p {
     #nav.show {
         display: block;
     }   
-
-    /*****************************************************************************************/
-
+ 
     /* **ABOUT SECTION MOBILE** */
     .about section {
         display: flex;
@@ -559,8 +548,8 @@ footer .wrapper p {
     }
 
     .contact .gallery .fig {        
-        min-width: 180px;
-        min-height: 180px;       
+        max-width: 180px;
+        max-height: 180px;       
     }
 
     .contact .gallery .fig3 {
@@ -603,3 +592,14 @@ footer .wrapper p {
     }
 }
 
+/* ** MEDIA QUERY ** SMALL SCREENS** */
+@media (max-width: 480px) {
+    .contact .gallery .fig {        
+        max-width: 150px;
+        max-height: 150px;       
+    }
+
+    .contact .formWrapper .bottomNav a {
+        margin: 0 10px;
+    }
+}
